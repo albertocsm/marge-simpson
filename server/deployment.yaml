@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: default
+  name: marge-backend
+  labels:
+    app: marge-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: marge-backend
+  template:
+    metadata:
+      labels:
+        app: marge-backend
+    spec:
+      containers:
+      - name: marge-backend
+        image: albertocsm/marge-backend:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9090
