@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "89f8b380-4957-11e8-acad-1dba7038e140",
+    "_type": "visualization",
+    "_source": {
+      "title": "Application List",
+      "visState": "{\"title\":\"Application List\",\"type\":\"table\",\"params\":{\"perPage\":20,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":true,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"count\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"Name.keyword\",\"customLabel\":\"Replicas\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"CanonicalName.keyword\",\"exclude\":\"\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Application\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Version.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Version\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Namespace.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Namespace\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"Timestamp\",\"customLabel\":\"Last Seen At\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":0,\"direction\":\"desc\"}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"4fb478d0-4957-11e8-acad-1dba7038e140\",\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"4fb478d0-4957-11e8-acad-1dba7038e140\",\"key\":\"Version.keyword\",\"negate\":true,\"params\":{\"query\":\"gcr.io/google_containers/kube-proxy:v1.8.8-gke.0\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"gcr.io/google_containers/kube-proxy:v1.8.8-gke.0\"},\"query\":{\"match\":{\"Version.keyword\":{\"query\":\"gcr.io/google_containers/kube-proxy:v1.8.8-gke.0\",\"type\":\"phrase\"}}}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  }
+]
