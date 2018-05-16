@@ -1,13 +1,13 @@
 package cluster
 
 import (
+	"context"
+	"fmt"
+	"github.com/olivere/elastic"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
-	"github.com/olivere/elastic"
-	"context"
-	"time"
 	"strings"
-	"fmt"
+	"time"
 )
 
 type PodDoc struct {
@@ -89,7 +89,7 @@ func Index(client elastic.Client, pods []PodDoc) {
 	}
 }
 
-func cleanPodName(str string) (string) {
+func cleanPodName(str string) string {
 
 	fmt.Println("1-" + str)
 	str = strings.TrimRight(str, "-")

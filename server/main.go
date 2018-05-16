@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"k8s.io/client-go/rest"
-	"k8s.io/client-go/kubernetes"
+	"github.com/albertocsm/ta-hackday-k8s-scrapper/server/cluster"
 	"github.com/olivere/elastic"
+	"k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/rest"
 	"log"
 	"os"
-	"github.com/albertocsm/marge-backend/server/cluster"
 	"time"
 )
 
